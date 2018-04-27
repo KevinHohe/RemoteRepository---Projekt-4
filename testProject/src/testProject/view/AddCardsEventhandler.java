@@ -8,10 +8,10 @@ import testProject.PluPanda;
 
 public class AddCardsEventhandler {
 	
-	 @FXML
+ 	  @FXML
 	  private Button btnAddPicture;
 	 
-	 @FXML
+	  @FXML
 	  private Textfield TxtAddPicture;
 	  
 	  @FXML
@@ -21,9 +21,9 @@ public class AddCardsEventhandler {
 	  private Textfield txtAddPlural;
 	  
 	  @FXML
-	  private Button btnAbord;
-	 
-	 @FXML
+	  private Button btnClose;
+	  
+	  @FXML
 	  private Button btnAddAll;
 	 
 	 
@@ -52,12 +52,12 @@ public class AddCardsEventhandler {
 		return txtAddPlural;
 	}
 
-	public Button getBtnAbord() {
-		return btnAbord;
+	public Button getBtnClose() {
+		return btnClose;
 	}
 
-	public void setBtnAbord(Button btnAbord) {
-		this.btnAbord = btnAbord;
+	public void setBtnClose(Button btnClose) {
+		this.btnClose = btnClose;
 	}
 
 	public Button getBtnAddAll() {

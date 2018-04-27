@@ -32,7 +32,7 @@
       </GridPane>
       <ToolBar layoutY="253.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="595.0">
         <items>
-          <Button fx:id="btnAbord" alignment="CENTER" mnemonicParsing="false" onAction="#handleBtnAbordClickedAction" prefHeight="25.0" prefWidth="100.0" text="Abbrechen" />
+          <Button fx:id="btnClose" alignment="CENTER" mnemonicParsing="false" onAction="#handleBtnCloseClickedAction" prefHeight="25.0" prefWidth="100.0" text="Schliessen" />
             <Button fx:id="btnAdd" alignment="CENTER" mnemonicParsing="false" onAction="#handleBtnAddClickedAction" prefHeight="25.0" prefWidth="100.0" text="Hinzufügen" />
         </items>
       </ToolBar>
