@@ -15,14 +15,8 @@ public class AddCardsEventhandler {
 	  private Textfield TxtAddPicture;
 	  
 	  @FXML
-	  private Button btnAddSingle;
-	  
-	  @FXML
 	  private Textfield txtAddSingle;
-	  
-	  @FXML
-	  private Button btnAddPlural;
-	  
+
 	  @FXML
 	  private Textfield txtAddPlural;
 	  
@@ -50,26 +44,10 @@ public class AddCardsEventhandler {
 		return TxtAddPicture;
 	}
 
-	public Button getBtnAddSingle() {
-		return btnAddSingle;
-	}
-
-	public void setBtnAddSingle(Button btnAddSingle) {
-		this.btnAddSingle = btnAddSingle;
-	}
-	
 	public Textfield getTxtAddSingle() {
 		return txtAddSingle;
 	}
 
-	public Button getBtnAddPlural() {
-		return btnAddPlural;
-	}
-
-	public void setBtnAddPlural(Button btnAddPlural) {
-		this.btnAddPlural = btnAddPlural;
-	}
-	
 	public Textfield getTxtAddPlural() {
 		return txtAddPlural;
 	}
