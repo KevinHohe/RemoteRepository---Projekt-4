@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <GridPane layoutX="16.0" layoutY="65.0" prefHeight="188.0" prefWidth="564.0">
@@ -23,18 +22,18 @@
           <RowConstraints maxHeight="62.599999999999994" minHeight="10.0" prefHeight="62.599999999999994" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField id="txtAddPicture" prefHeight="26.0" prefWidth="0.0" />
-            <TextField id="txtAddSingle" GridPane.rowIndex="1" />
-            <TextField id="txtAddPlural" GridPane.rowIndex="2" />
-            <Button id="btnAddPicture" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Bild hinzufügen" GridPane.columnIndex="1" />
-            <Button id="btnAddSingle" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Einzahl" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button id="btnAddPlural" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Mehrzahl" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField id="txtAddPicture" fx:id="txtAddPicture" prefHeight="26.0" prefWidth="0.0" />
+            <TextField fx:id="txtAddSingle" GridPane.rowIndex="1" />
+            <TextField fx:id="txtAddPlural" GridPane.rowIndex="2" />
+            <Button fx:id="btnAddPicture" mnemonicParsing="false" onAction="#handleBtnAddPictureClickedAction" prefHeight="25.0" prefWidth="100.0" text="Bild hinzufügen" GridPane.columnIndex="1" />
+            <Button fx:id="btnSingle" mnemonicParsing="false" onAction="#handleBtnSingleClickedAction" prefHeight="25.0" prefWidth="100.0" text="Einzahl" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="btnPlural" mnemonicParsing="false" onAction="#handleBtnPluralClickedAction" prefHeight="25.0" prefWidth="100.0" text="Mehrzahl" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
       <ToolBar layoutY="253.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="595.0">
         <items>
-          <Button id="btnAbord" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Abbrechen" />
-            <Button id="btnAddAll" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Hinzufügen" />
+          <Button fx:id="btnAbord" alignment="CENTER" mnemonicParsing="false" onAction="#handleBtnAbordClickedAction" prefHeight="25.0" prefWidth="100.0" text="Abbrechen" />
+            <Button fx:id="btnAdd" alignment="CENTER" mnemonicParsing="false" onAction="#handleBtnAddClickedAction" prefHeight="25.0" prefWidth="100.0" text="Hinzufügen" />
         </items>
       </ToolBar>
       <Label layoutX="219.0" layoutY="31.0" text="Hinzufügen von neuen Karten" />
