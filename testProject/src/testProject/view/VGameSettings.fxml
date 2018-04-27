@@ -7,7 +7,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ToolBar layoutY="316.0" prefHeight="40.0" prefWidth="200.0">
+      <ToolBar layoutY="322.0" prefHeight="40.0" prefWidth="600.0">
         <items>
           <Button mnemonicParsing="false" text="Button" />
         </items>

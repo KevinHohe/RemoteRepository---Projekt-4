@@ -18,16 +18,19 @@
         </columnConstraints>
         <rowConstraints>
             <RowConstraints maxHeight="113.80001220703124" minHeight="10.0" prefHeight="65.00000610351563" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="113.80001220703124" minHeight="10.0" prefHeight="65.00000610351563" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="104.19998779296876" minHeight="10.0" prefHeight="63.400000000000006" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="62.599999999999994" minHeight="10.0" prefHeight="62.599999999999994" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <TextField id="txtAddPicture" fx:id="txtAddPicture" prefHeight="26.0" prefWidth="0.0" GridPane.columnIndex="1" />
-            <TextField fx:id="txtAddSingle" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="txtAddPlural" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtAddSingle" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtAddPlural" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Button fx:id="btnAddPicture" mnemonicParsing="false" onAction="#handleBtnAddPictureClickedAction" prefHeight="25.0" prefWidth="100.0" text="Bild hinzufügen" />
-            <Label text="Singular" GridPane.rowIndex="1" />
-            <Label text="Plural" GridPane.rowIndex="2" />
+            <Label text="Singular" GridPane.rowIndex="2" />
+            <Label text="Plural" GridPane.rowIndex="3" />
+            <Button fx:id="btnAddSound" mnemonicParsing="false" onAction="#handleBtnAddSoundClickedAction" prefHeight="25.0" prefWidth="100.0" text="Ton hinzufügen" GridPane.rowIndex="1" />
+            <TextField id="txtAddPicture" fx:id="txtAddSound" prefHeight="26.0" prefWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
       <ToolBar layoutY="253.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="595.0">

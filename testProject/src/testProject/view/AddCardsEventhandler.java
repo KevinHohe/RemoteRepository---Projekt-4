@@ -15,6 +15,12 @@ public class AddCardsEventhandler {
 	  private Textfield TxtAddPicture;
 	  
 	  @FXML
+	  private Button btnAddSound;
+	  
+	  @FXML
+	  private Textfield TxtAddSound;
+	  
+	  @FXML
 	  private Textfield txtAddSingle;
 
 	  @FXML
@@ -36,38 +42,82 @@ public class AddCardsEventhandler {
 		return btnAddPicture;
 	}
 
+
 	public void setBtnAddPicture(Button btnAddPicture) {
 		this.btnAddPicture = btnAddPicture;
 	}
-	
+
+
 	public Textfield getTxtAddPicture() {
 		return TxtAddPicture;
 	}
+
+
+	public void setTxtAddPicture(Textfield txtAddPicture) {
+		TxtAddPicture = txtAddPicture;
+	}
+
+
+	public Button getBtnAddSound() {
+		return btnAddSound;
+	}
+
+
+	public void setBtnAddSound(Button btnAddSound) {
+		this.btnAddSound = btnAddSound;
+	}
+
+
+	public Textfield getTxtAddSound() {
+		return TxtAddSound;
+	}
+
+
+	public void setTxtAddSound(Textfield txtAddSound) {
+		TxtAddSound = txtAddSound;
+	}
+
 
 	public Textfield getTxtAddSingle() {
 		return txtAddSingle;
 	}
 
+
+	public void setTxtAddSingle(Textfield txtAddSingle) {
+		this.txtAddSingle = txtAddSingle;
+	}
+
+
 	public Textfield getTxtAddPlural() {
 		return txtAddPlural;
 	}
+
+
+	public void setTxtAddPlural(Textfield txtAddPlural) {
+		this.txtAddPlural = txtAddPlural;
+	}
+
 
 	public Button getBtnClose() {
 		return btnClose;
 	}
 
+
 	public void setBtnClose(Button btnClose) {
 		this.btnClose = btnClose;
 	}
+
 
 	public Button getBtnAddAll() {
 		return btnAddAll;
 	}
 
+
 	public void setBtnAddAll(Button btnAddAll) {
 		this.btnAddAll = btnAddAll;
 	}
-	 
-	 
+
+
+
 
 }
