@@ -8,11 +8,16 @@
  */
 package testProject.view;
 
+import java.io.IOException;
+
+import Utility.JPAConfig;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
-import javafx.stage.Stage;
 import testProject.PluPanda;
+import testProject.controller.MainMenueController;
 
 /**
  * Koordiniert den Aufbau des Startdialogs von {@link PluPanda}.
@@ -20,42 +25,106 @@ import testProject.PluPanda;
  * @since 26.04.2018 13:38:47 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
  */
 public class MainMenueEventhandler {
-  ///* ---- Konstante ------------------------------------------------------------ */
-  /* ---- Attribute ------------------------------------------------------------ */
+  /* ---- Konstante ------------------------------------------------------------ */
+
+  /** @since 27.04.2018 10:40:19 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
+  private static final String FXML_DATA = "MainMenue.fxml";
+
+  /* ---- FX-Elemente --------------------------------------------------------- */
 
   /** @since 26.04.2018 13:50:11 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
   @FXML
-  private Button   btnSpielen;
+  private Button              btnSpielen;
   /** @since 26.04.2018 13:50:12 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
   @FXML
-  private Button   btnStatistik;
+  private Button              btnStatistik;
   /** @since 26.04.2018 13:50:12 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
   @FXML
-  private Button   btnHinzufuegen;
+  private Button              btnHinzufuegen;
   /** @since 26.04.2018 13:50:13 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
   @FXML
-  private Button   btnEinstellungen;
+  private Button              btnEinstellungen;
   /** @since 26.04.2018 13:50:16 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
   @FXML
-  private Button   btnBeenden;
+  private Button              btnBeenden;
   /** @since 26.04.2018 13:52:22 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
   @FXML
-  private GridPane root;
+  private GridPane            root;
+
+  /* ---- Attribute ------------------------------------------------------------ */
+
+  /** @since 27.04.2018 10:51:40 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
+  private MainMenueController controller;
 
   ///* ---- Start ---------------------------------------------------------------- */
   /* ---- Konstruktor ---------------------------------------------------------- */
 
   /**
    * 
-   * @param stage 
+   * @param controller 
    * @since 26.04.2018 13:51:14 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
    */
-  public MainMenueEventhandler(Stage stage) {
-    
+  public MainMenueEventhandler(MainMenueController controller) {
+    setController(controller);
+    FXMLLoader loader = new FXMLLoader(getClass().getResource(FXML_DATA));
+    loader.setController(this);
+
+    try {
+      loader.load();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
   ///* ---- Initialisierung ------------------------------------------------------ */
-  ///* ---- Logik ---------------------------------------------------------------- */
+  /* ---- Logik ---------------------------------------------------------------- */
+
+  /**
+   * @param event
+   * @since 27.04.2018 10:57:48 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  @FXML
+  protected void handleBtnSpielenClickedAction(ActionEvent event) {
+    
+  }
+  
+  /**
+   * @param event
+   * @since 27.04.2018 10:58:13 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  @FXML
+  protected void handleBtnStatistikClickedAction(ActionEvent event) {
+    
+  }
+  
+  /**
+   * @param event
+   * @since 27.04.2018 10:58:37 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  @FXML
+  protected void handleBtnHinzufuegenClickedAction(ActionEvent event) {
+    
+  }
+  
+  /**
+   * @param event
+   * @since 27.04.2018 10:59:19 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  @FXML
+  protected void handleBtnEinstellungenClickedAction(ActionEvent event) {
+    
+  }
+  
+  /**
+   * @param event
+   * @since 27.04.2018 10:59:42 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  @FXML
+  protected void handleBtnBeendenClickedAction(ActionEvent event) {
+    JPAConfig.close();
+    this.getController().getStage().close();
+  }
+  
   /* ---- get/is/set/add ------------------------------------------------------- */
 
   /**
@@ -136,6 +205,22 @@ public class MainMenueEventhandler {
    */
   public void setBtnBeenden(Button btnBeenden) {
     this.btnBeenden = btnBeenden;
+  }
+
+  /**
+   * @return controller
+   * @since 27.04.2018 10:52:25 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  public MainMenueController getController() {
+    return controller;
+  }
+
+  /**
+   * @param controller
+   * @since 27.04.2018 10:52:27 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  public void setController(MainMenueController controller) {
+    this.controller = controller;
   }
 
   /**

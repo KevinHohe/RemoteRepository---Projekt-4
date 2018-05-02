@@ -1,10 +1,11 @@
 package testProject;
 
+import Utility.JPAConfig;
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import testProject.view.MainMenueEventhandler;
+import testProject.controller.MainMenueController;
 
 /**
  * TODO: Auszug aus Fachkonzept zur allgemeinen Programmbeschreibung einfügen.
@@ -19,6 +20,7 @@ public class PluPanda extends Application {
    * @since 26.04.2018 13:42:48 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
    */
   public static void main(String[] args) {
+    JPAConfig.connect();
     launch(args);
   }
 
@@ -28,13 +30,23 @@ public class PluPanda extends Application {
    */
   @Override
   public void start(Stage stage) throws Exception {
-    MainMenueEventhandler mainMenueEventhandler = new MainMenueEventhandler(stage);
-    Parent root = mainMenueEventhandler.getRoot();
+    MainMenueController controller = new MainMenueController(stage);
+    Parent root = controller.getEventHandler().getRoot();
     Scene scene = new Scene(root);
-    
+
     stage.setTitle("PluPanda");
     stage.setScene(scene);
     stage.show();
+  }
+
+  /** (non-Javadoc).
+   * @see java.lang.Object#finalize()
+   * @since 27.04.2018 09:33:54 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  @Override
+  protected void finalize() throws Throwable {
+    JPAConfig.close();
+    super.finalize();
   }
 
 }
