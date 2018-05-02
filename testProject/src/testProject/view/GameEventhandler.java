@@ -1,4 +1,4 @@
-package src.testProject.view;
+package testProject.view;
 
 public class GameEventhandler {
 

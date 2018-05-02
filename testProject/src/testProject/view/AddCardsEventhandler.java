@@ -1,10 +1,9 @@
-package src.testProject.view;
+package testProject.view;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.layout.GridPane;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import testProject.PluPanda;
 
 public class AddCardsEventhandler {
 	
@@ -12,13 +11,13 @@ public class AddCardsEventhandler {
 	  private Button btnAddPicture;
 	 
 	  @FXML
-	  private Textfield TxtAddPicture;
+	  private TextField TxtAddPicture;
 	  
 	  @FXML
-	  private Textfield txtAddSingle;
+	  private TextField txtAddSingle;
 
 	  @FXML
-	  private Textfield txtAddPlural;
+	  private TextField txtAddPlural;
 	  
 	  @FXML
 	  private Button btnClose;
@@ -40,15 +39,15 @@ public class AddCardsEventhandler {
 		this.btnAddPicture = btnAddPicture;
 	}
 	
-	public Textfield getTxtAddPicture() {
+	public TextField getTxtAddPicture() {
 		return TxtAddPicture;
 	}
 
-	public Textfield getTxtAddSingle() {
+	public TextField getTxtAddSingle() {
 		return txtAddSingle;
 	}
 
-	public Textfield getTxtAddPlural() {
+	public TextField getTxtAddPlural() {
 		return txtAddPlural;
 	}
 
