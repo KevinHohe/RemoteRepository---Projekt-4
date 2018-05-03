@@ -1,5 +1,6 @@
 package testProject.view;
 
+import java.io.File;
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
@@ -9,6 +10,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.DirectoryChooser;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import testProject.controller.CAddCard;
 import testProject.controller.MainMenueController;
@@ -37,6 +40,7 @@ public class AddCardsEventhandler {
 
 	@FXML
 	private Button btnAddAll;
+	
 
 	private CAddCard controller;
 
@@ -57,8 +61,12 @@ public class AddCardsEventhandler {
 	}
 
 	@FXML
-	protected void handleBtnAddPictureClickedAction(ActionEvent event) {
-
+	protected void handleBtnAddPictureClickedAction(ActionEvent event)  {
+		FileChooser uploader = new FileChooser();
+		uploader.setTitle("Hinzufügen");
+		File defaultOrdner = new File("C:/");
+		uploader.setInitialDirectory(defaultOrdner);
+		File selected = uploader.showOpenDialog(this.getController().getStage());
 	}
 
 	@FXML

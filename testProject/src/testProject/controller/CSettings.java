@@ -1,6 +1,5 @@
 package testProject.controller;
 
-import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import testProject.view.SettingsEventhandler;
 
