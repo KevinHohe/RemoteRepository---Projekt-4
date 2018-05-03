@@ -85,36 +85,34 @@ public class MainMenueEventhandler {
    */
   @FXML
   protected void handleBtnSpielenClickedAction(ActionEvent event) {
-    
+
   }
-  
+
   /**
    * @param event
    * @since 27.04.2018 10:58:13 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
    */
   @FXML
   protected void handleBtnStatistikClickedAction(ActionEvent event) {
-    
+
   }
-  
+
   /**
    * @param event
    * @since 27.04.2018 10:58:37 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
    */
   @FXML
   protected void handleBtnHinzufuegenClickedAction(ActionEvent event) {
-    
+
   }
-  
+
   /**
    * @param event
    * @since 27.04.2018 10:59:19 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
    */
   @FXML
-  protected void handleBtnEinstellungenClickedAction(ActionEvent event) {
-    
-  }
-  
+  protected void handleBtnEinstellungenClickedAction(ActionEvent event) {}
+
   /**
    * @param event
    * @since 27.04.2018 10:59:42 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
@@ -124,7 +122,7 @@ public class MainMenueEventhandler {
     JPAConfig.close();
     this.getController().getStage().close();
   }
-  
+
   /* ---- get/is/set/add ------------------------------------------------------- */
 
   /**

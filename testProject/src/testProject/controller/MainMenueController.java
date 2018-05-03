@@ -39,6 +39,7 @@ public class MainMenueController {
     setStage(stage);
     this.setEventHandler(new MainMenueEventhandler(this));
   }
+  
 
   ///* ---- Initialisierung ------------------------------------------------------ */
   ///* ---- Logik ---------------------------------------------------------------- */

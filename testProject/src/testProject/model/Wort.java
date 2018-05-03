@@ -9,7 +9,6 @@
 package testProject.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
@@ -24,10 +23,11 @@ public class Wort {
 
   /** @since 27.04.2018 08:59:38 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
   @Id
-  @GeneratedValue
   private int    kategorieID;
   /** @since 27.04.2018 08:59:41 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
-  private String beschreibung;
+  private String wortSingular;
+  /** @since 03.05.2018 13:35:52 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
+  private String wortPlural;
 
   ///* ---- Start ---------------------------------------------------------------- */
   ///* ---- Konstruktor ---------------------------------------------------------- */
@@ -43,29 +43,45 @@ public class Wort {
     return kategorieID;
   }
 
-//  /**
-//   * @param kategorieID
-//   * @since 27.04.2018 09:00:14 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
-//   */
-//  public void setKategorieID(int kategorieID) {
-//    this.kategorieID = kategorieID;
-//  }
-
   /**
-   * @return beschreibung
-   * @since 27.04.2018 09:00:15 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   * @return wortSingular
+   * @since 03.05.2018 13:36:32 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
    */
-  public String getBeschreibung() {
-    return beschreibung;
+  public String getWortSingular() {
+    return wortSingular;
   }
 
   /**
-   * @param beschreibung
-   * @since 27.04.2018 09:00:16 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   * @param wortSingular
+   * @since 03.05.2018 13:36:34 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
    */
-  public void setBeschreibung(String beschreibung) {
-    this.beschreibung = beschreibung;
+  public void setWortSingular(String wortSingular) {
+    this.wortSingular = wortSingular;
   }
+
+  /**
+   * @return wortPlural
+   * @since 03.05.2018 13:36:35 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  public String getWortPlural() {
+    return wortPlural;
+  }
+
+  /**
+   * @param wortPlural
+   * @since 03.05.2018 13:36:36 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  public void setWortPlural(String wortPlural) {
+    this.wortPlural = wortPlural;
+  }
+
+  //  /**
+  //   * @param kategorieID
+  //   * @since 27.04.2018 09:00:14 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+  //   */
+  //  public void setKategorieID(int kategorieID) {
+  //    this.kategorieID = kategorieID;
+  //  }
 
   ///* ---- create --------------------------------------------------------------- */
 }
