@@ -1,5 +1,6 @@
 package testProject.controller;
 
+import javafx.stage.Stage;
 import testProject.view.AddCardsEventhandler;
 import testProject.view.SettingsEventhandler;
 
@@ -10,9 +11,13 @@ import testProject.view.SettingsEventhandler;
  */
 public class CAddCard {
 	
+	/*----------------Attribute------------------------------------------------------------------------------*/
 	private AddCardsEventhandler eventHandler;
 	
-	public CAddCard() {
+	private Stage stage;
+	
+	public CAddCard(Stage stage) {
+		this.setStage(stage);
 		this.setEventHandler(new AddCardsEventhandler(this));
 	}
 
@@ -22,6 +27,14 @@ public class CAddCard {
 
 	public void setEventHandler(AddCardsEventhandler eventHandler) {
 		this.eventHandler = eventHandler;
+	}
+
+	public Stage getStage() {
+		return stage;
+	}
+
+	public void setStage(Stage stage) {
+		this.stage = stage;
 	}
 	
 

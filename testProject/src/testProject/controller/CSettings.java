@@ -15,13 +15,11 @@ public class CSettings {
 	
 	private Stage stage;
 	
-	public CSettings() {
-		// TODO Auto-generated constructor stub
+	public CSettings(Stage stage) {
+		this.setStage(stage);
 		this.setEventHandler(new SettingsEventhandler(this));
 	}
 	
-	
-
 	public SettingsEventhandler getEventHandler() {
 		return eventHandler;
 	}

@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import testProject.controller.CGameSettings;
+import testProject.controller.MainMenueController;
 
 public class GameSettingsEventhandler {
 	
@@ -26,7 +27,7 @@ public class GameSettingsEventhandler {
 	public GameSettingsEventhandler(CGameSettings controller) {
 		this.setController(controller);
 		FXMLLoader loader = new FXMLLoader(getClass().getResource(FXML_DATA));
-		Stage stage = new Stage();
+		Stage stage = controller.getStage();
 		loader.setController(this);
 		
 		try {
@@ -46,7 +47,8 @@ public class GameSettingsEventhandler {
 	
 	@FXML
 	public void handleBtnBackClickedAction(ActionEvent event) {
-		
+		this.getController().getStage().close();
+	     new MainMenueController(new Stage());
 	}
 	
 	public CGameSettings getController() {

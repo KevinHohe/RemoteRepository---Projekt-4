@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import testProject.controller.CAddCard;
+import testProject.controller.MainMenueController;
 /**
 *@author pbeisert
 *@since  03.05.2018 07:51:04 <a href="patrick.beisert@ibs-banking.com" >Patrick Beisert</a>  | Erstellt
@@ -42,7 +43,7 @@ public class AddCardsEventhandler {
 	public AddCardsEventhandler(CAddCard cAddCard) {
 		this.setController(cAddCard);
 		FXMLLoader loader = new FXMLLoader(getClass().getResource(FXML_DATA));
-		Stage stage = new Stage();
+		Stage stage = controller.getStage();
 		loader.setController(this);
 
 		try {
@@ -62,7 +63,8 @@ public class AddCardsEventhandler {
 
 	@FXML
 	protected void handleBtnCloseClickedAction(ActionEvent event) {
-
+		this.getController().getStage().close();
+	     new MainMenueController(new Stage());
 	}
 
 	@FXML

@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import testProject.controller.CStatistics;
+import testProject.controller.MainMenueController;
 
 /**
 *TODO Kommentieren  
@@ -29,7 +30,7 @@ public class StatisticsEventhandler {
 	public StatisticsEventhandler(CStatistics controller) {
 		this.setController(controller);
 		FXMLLoader loader = new FXMLLoader(getClass().getResource(FXML_DATA));
-		Stage stage = new Stage();
+		Stage stage = controller.getStage();
 		loader.setController(this);
 		
 		try {
@@ -43,8 +44,9 @@ public class StatisticsEventhandler {
 	}
 	
 	@FXML
-	protected void handleBtnCloseClickedAction(ActionEvent event) {
-		
+	protected void handleBtnBackClickedAction(ActionEvent event) {
+		this.getController().getStage().close();
+	     new MainMenueController(new Stage());
 	}
 	
 	public Button getBtnClose() {

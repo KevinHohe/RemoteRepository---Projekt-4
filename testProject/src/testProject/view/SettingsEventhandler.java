@@ -33,7 +33,7 @@ public class SettingsEventhandler {
 	public SettingsEventhandler(CSettings controller) {
 		this.setController(controller);
 		FXMLLoader loader = new FXMLLoader(getClass().getResource(FXML_DATA));
-		Stage stage = new Stage();
+		Stage stage = controller.getStage();
 		loader.setController(this);
 		
 		try {
@@ -53,8 +53,8 @@ public class SettingsEventhandler {
 	
 	@FXML 
 	protected void handleBtnAbordClickedAction(ActionEvent event) {
-//		new MainMenueController();
-		 this.getController().getStage().close();
+		this.getController().getStage().close();
+	     new MainMenueController(new Stage());
 	}
 	
 	public Button getBtnSave() {

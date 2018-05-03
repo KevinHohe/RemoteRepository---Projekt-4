@@ -1,5 +1,6 @@
 package testProject.controller;
 
+import javafx.stage.Stage;
 import testProject.view.GameSettingsEventhandler;
 
 /**
@@ -12,7 +13,10 @@ public class CGameSettings {
 	/*----------------Attribute------------------------------------------------------------------------------*/
 	private GameSettingsEventhandler eventHandler;
 	
-	public CGameSettings() {
+	private Stage stage;
+	
+	public CGameSettings(Stage stage) {
+		this.setStage(stage);
 		this.setEventHandler(new GameSettingsEventhandler(this));
 	}
 
@@ -22,6 +26,14 @@ public class CGameSettings {
 
 	public void setEventHandler(GameSettingsEventhandler eventHandler) {
 		this.eventHandler = eventHandler;
+	}
+
+	public Stage getStage() {
+		return stage;
+	}
+
+	public void setStage(Stage stage) {
+		this.stage = stage;
 	}
 
 	
