@@ -99,7 +99,6 @@ public class MainMenueEventhandler {
 	 */
 
 	/**
-	 * 
 	 * @param controller
 	 * @since 26.04.2018 13:51:14 <a href="mailto:david@lippert-familie.de">David
 	 *        Lippert</a> | Erstellt
