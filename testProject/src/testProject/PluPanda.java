@@ -20,7 +20,7 @@ public class PluPanda extends Application {
    * @since 26.04.2018 13:42:48 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
    */
   public static void main(String[] args) {
-    JPAConfig.connect();
+//    JPAConfig.connect();
     launch(args);
   }
 

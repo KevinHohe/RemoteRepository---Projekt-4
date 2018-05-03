@@ -23,7 +23,7 @@ public class MainMenueController {
   /** @since 27.04.2018 10:41:48 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
   private MainMenueEventhandler eventHandler;
   /** @since 27.04.2018 10:45:51 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
-  private Stage                 stage;
+  private Stage stage;
 
   ///* ---- Start ---------------------------------------------------------------- */
   /* ---- Konstruktor ---------------------------------------------------------- */

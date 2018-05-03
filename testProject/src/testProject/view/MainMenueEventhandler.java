@@ -17,6 +17,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import testProject.PluPanda;
+import testProject.controller.CAddCard;
+import testProject.controller.CGameSettings;
+import testProject.controller.CSettings;
+import testProject.controller.CStatistics;
 import testProject.controller.MainMenueController;
 
 /**
@@ -85,7 +89,7 @@ public class MainMenueEventhandler {
    */
   @FXML
   protected void handleBtnSpielenClickedAction(ActionEvent event) {
-    
+    new CGameSettings();
   }
   
   /**
@@ -94,7 +98,7 @@ public class MainMenueEventhandler {
    */
   @FXML
   protected void handleBtnStatistikClickedAction(ActionEvent event) {
-    
+    new CStatistics();
   }
   
   /**
@@ -103,7 +107,7 @@ public class MainMenueEventhandler {
    */
   @FXML
   protected void handleBtnHinzufuegenClickedAction(ActionEvent event) {
-    
+    new CAddCard();
   }
   
   /**
@@ -112,7 +116,7 @@ public class MainMenueEventhandler {
    */
   @FXML
   protected void handleBtnEinstellungenClickedAction(ActionEvent event) {
-    
+    new CSettings();
   }
   
   /**
@@ -121,7 +125,7 @@ public class MainMenueEventhandler {
    */
   @FXML
   protected void handleBtnBeendenClickedAction(ActionEvent event) {
-    JPAConfig.close();
+//    JPAConfig.close();
     this.getController().getStage().close();
   }
   
