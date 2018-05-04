@@ -7,12 +7,14 @@
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 
 		<class>testProject.model.Wort</class>
+		<class>testProject.model.Kategorie</class>
 
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:sqlite:C:/Users/Teilnehmer/Downloads/plupandadb.sqlite" />
+			<property name="eclipselink.id-validation" value="negative"/>
 		</properties>
 	</persistence-unit>
 </persistence>
