@@ -13,7 +13,7 @@
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:sqlite:C:/Users/Teilnehmer/Downloads/plupandadb.sqlite" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:sqlite:C:\SQLiteDB\plupandadb.sqlite" />
 		</properties>
 	</persistence-unit>
 </persistence>
