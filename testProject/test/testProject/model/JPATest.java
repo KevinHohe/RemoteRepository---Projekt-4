@@ -50,8 +50,7 @@ public class JPATest {
 
 		transaction.begin();
 		Wort wort = new Wort();
-		wort.setRowID(7);
-		wort.setWortID(7);
+
 		wort.setWortSingular("Yeah");
 		wort.setWortPlural("Baby");
 
