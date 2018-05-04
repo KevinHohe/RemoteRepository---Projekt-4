@@ -7,6 +7,7 @@
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 
 		<class>testProject.model.Wort</class>
+		<class>testProject.model.Kategorie</class>
 
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 
