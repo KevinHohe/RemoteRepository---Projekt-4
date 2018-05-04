@@ -8,136 +8,131 @@
  */
 package testProject.model;
 
-import java.lang.annotation.Target;
-
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.IdClass;
-import javax.persistence.NamedQuery;
-import javax.persistence.SequenceGenerator;
 
 /**
  * Klasse repräsentiert Datenbanktabelle "Wort" in PluPandaDB.
- * 
  * @author <a href="mailto:david@lippert-familie.de">David Lippert</a>
- * @since 27.04.2018 08:10:24 <a href="mailto:david@lippert-familie.de">David
- *        Lippert</a> | Erstellt
+ * @since 27.04.2018 08:10:24 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+ */
+/**
+ * TODO: Kommentieren!
+ * @author <a href="mailto:david@lippert-familie.de">David Lippert</a>
+ * @since 04.05.2018 08:53:14 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
  */
 @Entity
-@IdClass(WortID.class)
-@NamedQuery(name = "Wort.findAll", query = "SELECT wort FROM Wort wort")
 public class Wort {
-	/// * ---- Konstante
-	/// ------------------------------------------------------------ */
-	/*
-	 * ---- Attribute ------------------------------------------------------------
-	 */
+  ///* ---- Konstante ------------------------------------------------------------ */
+  /* ---- Attribute ------------------------------------------------------------ */
 
-	/**
-	 * @since 27.04.2018 08:59:38 <a href="mailto:david@lippert-familie.de">David
-	 *        Lippert</a> | Erstellt
-	 */
-	@Id
-	private Integer rowid;
-	@Id
-	private Integer wortID;
-	private int kategorieID;
-	/**
-	 * @since 27.04.2018 08:59:41 <a href="mailto:david@lippert-familie.de">David
-	 *        Lippert</a> | Erstellt
-	 */
-	private String wortSingular;
-	/**
-	 * @since 03.05.2018 13:35:52 <a href="mailto:david@lippert-familie.de">David
-	 *        Lippert</a> | Erstellt
-	 */
-	private String wortPlural;
+  /** @since 27.04.2018 08:59:38 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
+  @Id
+  private Integer    wortID;
+  /** @since 27.04.2018 08:59:41 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
+  private String wortSingular;
+  /** @since 03.05.2018 13:35:52 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
+  private String wortPlural;
+  /** @since 04.05.2018 08:52:07 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
+  private String bild;
+  /** @since 04.05.2018 08:53:24 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
+  private String ton;
+  /** @since 04.05.2018 08:53:15 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
+  private int    kategorieID;
 
-	/// * ---- Start
-	/// ---------------------------------------------------------------- */
-	/// * ---- Konstruktor
-	/// ---------------------------------------------------------- */
-	/// * ---- Initialisierung
-	/// ------------------------------------------------------ */
-	/// * ---- Logik
-	/// ---------------------------------------------------------------- */
-	/*
-	 * ---- get/is/set/add -------------------------------------------------------
-	 */
+  /**
+   * @return wortSingular
+   * @since 03.05.2018 13:36:32 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  public String getWortSingular() {
+    return wortSingular;
+  }
 
-	public int getWortID() {
-		return wortID;
-	}
-	
-	public void setWortID(Integer wortID) {
-		this.wortID = wortID;
-	}
+  /**
+   * @param wortSingular
+   * @since 03.05.2018 13:36:34 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  public void setWortSingular(String wortSingular) {
+    this.wortSingular = wortSingular;
+  }
 
-	public int getRowID() {
-		return rowid;
-	}
+  /**
+   * @return wortPlural
+   * @since 03.05.2018 13:36:35 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  public String getWortPlural() {
+    return wortPlural;
+  }
 
-	public void setRowID(Integer rowid) {
-		this.rowid = rowid;
-	}
+  /**
+   * @param wortPlural
+   * @since 03.05.2018 13:36:36 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  public void setWortPlural(String wortPlural) {
+    this.wortPlural = wortPlural;
+  }
 
-	/**
-	 * @return kategorieID
-	 * @since 27.04.2018 09:00:12 <a href="mailto:david@lippert-familie.de">David
-	 *        Lippert</a> | Erstellt
-	 */
-	public int getKategorieID() {
-		return kategorieID;
-	}
+  /**
+   * @return bild
+   * @since 04.05.2018 08:54:14 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  public String getBild() {
+    return bild;
+  }
 
-	/**
-	 * @return wortSingular
-	 * @since 03.05.2018 13:36:32 <a href="mailto:david@lippert-familie.de">David
-	 *        Lippert</a> | Erstellt
-	 */
-	public String getWortSingular() {
-		return wortSingular;
-	}
+  /**
+   * @param bild
+   * @since 04.05.2018 08:54:11 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  public void setBild(String bild) {
+    this.bild = bild;
+  }
 
-	/**
-	 * @param wortSingular
-	 * @since 03.05.2018 13:36:34 <a href="mailto:david@lippert-familie.de">David
-	 *        Lippert</a> | Erstellt
-	 */
-	public void setWortSingular(String wortSingular) {
-		this.wortSingular = wortSingular;
-	}
+  /**
+   * @return ton
+   * @since 04.05.2018 08:54:08 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  public String getTon() {
+    return ton;
+  }
 
-	/**
-	 * @return wortPlural
-	 * @since 03.05.2018 13:36:35 <a href="mailto:david@lippert-familie.de">David
-	 *        Lippert</a> | Erstellt
-	 */
-	public String getWortPlural() {
-		return wortPlural;
-	}
+  /**
+   * @param ton
+   * @since 04.05.2018 08:54:06 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  public void setTon(String ton) {
+    this.ton = ton;
+  }
 
-	/**
-	 * @param wortPlural
-	 * @since 03.05.2018 13:36:36 <a href="mailto:david@lippert-familie.de">David
-	 *        Lippert</a> | Erstellt
-	 */
-	public void setWortPlural(String wortPlural) {
-		this.wortPlural = wortPlural;
-	}
+  ///* ---- Start ---------------------------------------------------------------- */
+  ///* ---- Konstruktor ---------------------------------------------------------- */
+  ///* ---- Initialisierung ------------------------------------------------------ */
+  ///* ---- Logik ---------------------------------------------------------------- */
+  /* ---- get/is/set/add ------------------------------------------------------- */
 
-	// /**
-	// * @param kategorieID
-	// * @since 27.04.2018 09:00:14 <a href="mailto:david@lippert-familie.de">David
-	// Lippert</a> | Erstellt
-	// */
-	// public void setKategorieID(int kategorieID) {
-	// this.kategorieID = kategorieID;
-	// }
+  /**
+   * @return kategorieID
+   * @since 27.04.2018 09:00:12 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  public int getKategorieID() {
+    return kategorieID;
+  }
 
-	/// * ---- create
-	/// --------------------------------------------------------------- */
+  /**
+   * @param kategorieID
+   * @since 04.05.2018 08:54:02 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+   */
+  public void setKategorieID(int kategorieID) {
+    this.kategorieID = kategorieID;
+  }
+
+  //  /**
+  //   * @param kategorieID
+  //   * @since 27.04.2018 09:00:14 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
+  //   */
+  //  public void setKategorieID(int kategorieID) {
+  //    this.kategorieID = kategorieID;
+  //  }
+
+  ///* ---- create --------------------------------------------------------------- */
 }
