@@ -13,7 +13,7 @@
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:sqlite:C:\SQLiteDB\plupandadb.sqlite" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:sqlite:C:\Users\khohe\git\RemoteRepository---Projekt-4\testProject\database\plupandadb.sqlite" />
 			<property name="eclipselink.id-validation" value="Negative" />
 		</properties>
 	</persistence-unit>
