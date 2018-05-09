@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import Utility.JPAConfig;
 import javafx.animation.FadeTransition;
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -18,6 +24,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import testProject.model.Wort;
 
 //import javafx.stage.Stage;
 //import testProject.view.GameEventhandler;
@@ -29,10 +36,19 @@ public class GameController extends Application {
 
 	private Tile selected = null;
 	private int clickCount = 2;
-	
+
 	private Parent createContent() {
 		Pane root = new Pane();
 		root.setPrefSize(600, 600);
+
+		Wort wort = new Wort();
+		EntityManagerFactory factory = JPAConfig.getFactory();
+		EntityManager manager = factory.createEntityManager();
+		EntityTransaction transaction = manager.getTransaction();
+
+		int in = 1;
+		transaction.begin();
+		manager.find(Wort.class, in);
 
 		char c = 'A';
 		List<Tile> tiles = new ArrayList<>();
@@ -78,11 +94,11 @@ public class GameController extends Application {
 
 			close();
 		}
-		
+
 		public void handleMouseClick(MouseEvent event) {
 			if (isOpen() || clickCount == 0)
 				return;
-			
+
 			clickCount--;
 
 			if (selected == null) {
@@ -95,7 +111,7 @@ public class GameController extends Application {
 						selected.close();
 						this.close();
 					}
-					
+
 					selected = null;
 					clickCount = 2;
 				});
