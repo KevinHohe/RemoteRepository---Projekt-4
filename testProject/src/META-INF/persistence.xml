@@ -13,13 +13,10 @@
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC" />
-<<<<<<< HEAD
 			<property name="javax.persistence.jdbc.url" value="jdbc:sqlite:C:/Users/Teilnehmer/Downloads/plupandadb.sqlite" />
 			<property name="eclipselink.id-validation" value="negative"/>
-=======
-			<property name="javax.persistence.jdbc.url" value="jdbc:sqlite:C:\Users\khohe\git\RemoteRepository---Projekt-4\testProject\database\plupandadb.sqlite" />
+		<property name="javax.persistence.jdbc.url" value="jdbc:sqlite:C:\Users\khohe\git\RemoteRepository---Projekt-4\testProject\database\plupandadb.sqlite" />
 			<property name="eclipselink.id-validation" value="Negative" />
->>>>>>> refs/heads/khohe
 		</properties>
 	</persistence-unit>
 </persistence>
