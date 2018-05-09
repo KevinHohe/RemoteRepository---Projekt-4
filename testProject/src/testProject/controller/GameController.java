@@ -8,6 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 import Utility.JPAConfig;
 import javafx.animation.FadeTransition;
@@ -41,30 +42,35 @@ public class GameController extends Application {
 		Pane root = new Pane();
 		root.setPrefSize(600, 600);
 
-		Wort wort = new Wort();
 		EntityManagerFactory factory = JPAConfig.getFactory();
 		EntityManager manager = factory.createEntityManager();
 		EntityTransaction transaction = manager.getTransaction();
 
-		int in = 1;
-		transaction.begin();
-		manager.find(Wort.class, in);
+		Query maxRowID = manager.createNamedQuery("SELECT COUNT(rowid) FROM wort");
+		int numberOfRows = maxRowID.getMaxResults();
+		
+		for(int rowID = 0; rowID < numberOfRows; rowID++) {
+			transaction.begin();
+			
+			Wort wort = manager.find(Wort.class, rowID);
+			
+			transaction.commit();
+			manager.close();
+			
+			List<Tile> tiles = new ArrayList<>();
+			for (int i = 0; i < NUM_OF_PAIRS; i++) {
+				tiles.add(new Tile(String.valueOf(wort.getWortSingular())));
+				tiles.add(new Tile(String.valueOf(wort.getWortPlural())));
+			}
 
-		char c = 'A';
-		List<Tile> tiles = new ArrayList<>();
-		for (int i = 0; i < NUM_OF_PAIRS; i++) {
-			tiles.add(new Tile(String.valueOf(c)));
-			tiles.add(new Tile(String.valueOf(c)));
-			c++;
-		}
+			Collections.shuffle(tiles);
 
-		Collections.shuffle(tiles);
-
-		for (int i = 0; i < tiles.size(); i++) {
-			Tile tile = tiles.get(i);
-			tile.setTranslateX(50 * (i % NUM_PER_ROW));
-			tile.setTranslateY(50 * (i / NUM_PER_ROW));
-			root.getChildren().add(tile);
+			for (int i = 0; i < tiles.size(); i++) {
+				Tile tile = tiles.get(i);
+				tile.setTranslateX(50 * (i % NUM_PER_ROW));
+				tile.setTranslateY(50 * (i / NUM_PER_ROW));
+				root.getChildren().add(tile);
+			}
 		}
 
 		return root;
