@@ -22,7 +22,7 @@ public class PluPanda extends Application {
 	 *        Lippert</a> | Erstellt
 	 */
 	public static void main(String[] args) {
-		// JPAConfig.connect();
+		JPAConfig.connect();
 		launch(args);
 	}
 
