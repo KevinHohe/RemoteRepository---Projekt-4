@@ -31,9 +31,9 @@
             <CheckBox mnemonicParsing="false" text="Klein" GridPane.rowIndex="5" />
             <CheckBox mnemonicParsing="false" text="Groß" GridPane.rowIndex="7" />
             <CheckBox mnemonicParsing="false" text="Mittel" GridPane.rowIndex="6" />
-            <CheckBox mnemonicParsing="false" text="6x6" GridPane.rowIndex="1" />
-            <CheckBox mnemonicParsing="false" text="6x8" GridPane.rowIndex="2" />
-            <CheckBox mnemonicParsing="false" text="8x8" GridPane.rowIndex="3" />
+            <CheckBox mnemonicParsing="false" text="4x5" GridPane.rowIndex="1" />
+            <CheckBox mnemonicParsing="false" text="4x6" GridPane.rowIndex="2" />
+            <CheckBox mnemonicParsing="false" text="5x6" GridPane.rowIndex="3" />
          </children>
       </GridPane>
    </center>
