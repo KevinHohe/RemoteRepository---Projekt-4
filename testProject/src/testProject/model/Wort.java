@@ -29,6 +29,7 @@ public class Wort {
   /** @since 27.04.2018 08:59:38 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
   @Id
   private Integer wortID;
+
   /** @since 27.04.2018 08:59:41 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
   private String  wortSingular;
   /** @since 03.05.2018 13:35:52 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
