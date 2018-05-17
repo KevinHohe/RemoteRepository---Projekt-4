@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane fx:id="root" maxHeight="350.0" maxWidth="200.0" minHeight="340.0" minWidth="200.0" prefHeight="340.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane fx:id="root" prefWidth="200.0" stylesheets="@PluPanda.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <columnConstraints>
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
    </columnConstraints>
    <rowConstraints>
-      <RowConstraints maxHeight="140.0" minHeight="100.0" prefHeight="140.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="140.0" minHeight="180.0" />
       <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
@@ -23,5 +26,13 @@
       <Button fx:id="btnBeenden" mnemonicParsing="false" onAction="#handleBtnBeendenClickedAction" prefWidth="100.0" text="Beenden" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
       <Button fx:id="btnEinstellungen" mnemonicParsing="false" onAction="#handleBtnEinstellungenClickedAction" prefWidth="100.0" text="Einstellungen" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
       <Button fx:id="btnHinzufuegen" mnemonicParsing="false" onAction="#handleBtnHinzufuegenClickedAction" prefWidth="100.0" text="Hinzufügen" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/PluPanda.png" />
+         </image>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </ImageView>
    </children>
 </GridPane>

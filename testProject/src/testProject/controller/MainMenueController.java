@@ -42,20 +42,7 @@ public class MainMenueController {
    * ---- Konstruktor ----------------------------------------------------------
    */
 
-<<<<<<< HEAD
-  /**
-   * Konstruiert ein {@link Object} von {@link MainMenueController}.
-   *
-   * @author <a href="mailto:david@lippert-familie.de">David Lippert</a>
-   * @param stage 
-   * @since 27.04.2018 10:41:22 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
-   */
-  public MainMenueController(Stage stage) {
-    setStage(stage);
-    this.setEventHandler(new MainMenueEventhandler(this));
-  }
-  
-=======
+
   /**
    * Konstruiert ein {@link Object} von {@link MainMenueController}.
    *
@@ -68,7 +55,7 @@ public class MainMenueController {
     setStage(stage);
     this.setEventHandler(new MainMenueEventhandler(this));
   }
->>>>>>> refs/heads/pbeisert
+
 
   /// * ---- Initialisierung
   /// ------------------------------------------------------ */

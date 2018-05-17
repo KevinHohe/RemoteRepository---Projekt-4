@@ -10,6 +10,7 @@ package testProject.view;
 
 import java.io.IOException;
 
+import Utility.JPAConfig;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -50,37 +51,37 @@ public class MainMenueEventhandler {
    *        Lippert</a> | Erstellt
    */
   @FXML
-  private Button btnSpielen;
+  private Button              btnSpielen;
   /**
    * @since 26.04.2018 13:50:12 <a href="mailto:david@lippert-familie.de">David
    *        Lippert</a> | Erstellt
    */
   @FXML
-  private Button btnStatistik;
+  private Button              btnStatistik;
   /**
    * @since 26.04.2018 13:50:12 <a href="mailto:david@lippert-familie.de">David
    *        Lippert</a> | Erstellt
    */
   @FXML
-  private Button btnHinzufuegen;
+  private Button              btnHinzufuegen;
   /**
    * @since 26.04.2018 13:50:13 <a href="mailto:david@lippert-familie.de">David
    *        Lippert</a> | Erstellt
    */
   @FXML
-  private Button btnEinstellungen;
+  private Button              btnEinstellungen;
   /**
    * @since 26.04.2018 13:50:16 <a href="mailto:david@lippert-familie.de">David
    *        Lippert</a> | Erstellt
    */
   @FXML
-  private Button btnBeenden;
+  private Button              btnBeenden;
   /**
    * @since 26.04.2018 13:52:22 <a href="mailto:david@lippert-familie.de">David
    *        Lippert</a> | Erstellt
    */
   @FXML
-  private GridPane root;
+  private GridPane            root;
 
   /*
    * ---- Attribute ------------------------------------------------------------
@@ -108,13 +109,13 @@ public class MainMenueEventhandler {
     FXMLLoader loader = new FXMLLoader(getClass().getResource(FXML_DATA));
     Stage stage = getController().getStage();
     loader.setController(this);
-    
+
     try {
       stage.setTitle("PluPanda");
       Parent rootElement = loader.load();
       stage.setScene(new Scene(rootElement));
       stage.show();
-      
+
     } catch (IOException e) {
       e.printStackTrace();
     }
@@ -136,41 +137,6 @@ public class MainMenueEventhandler {
     new CGameSettings(this.getController().getStage());
   }
 
-<<<<<<< HEAD
-  /**
-   * @param event
-   * @since 27.04.2018 10:57:48 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
-   */
-  @FXML
-  protected void handleBtnSpielenClickedAction(ActionEvent event) {
-
-  }
-
-  /**
-   * @param event
-   * @since 27.04.2018 10:58:13 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
-   */
-  @FXML
-  protected void handleBtnStatistikClickedAction(ActionEvent event) {
-
-  }
-
-  /**
-   * @param event
-   * @since 27.04.2018 10:58:37 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
-   */
-  @FXML
-  protected void handleBtnHinzufuegenClickedAction(ActionEvent event) {
-
-  }
-
-  /**
-   * @param event
-   * @since 27.04.2018 10:59:19 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
-   */
-  @FXML
-  protected void handleBtnEinstellungenClickedAction(ActionEvent event) {}
-
   /**
    * @param event
    * @since 27.04.2018 10:59:42 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
@@ -182,7 +148,7 @@ public class MainMenueEventhandler {
   }
 
   /* ---- get/is/set/add ------------------------------------------------------- */
-=======
+
   /**
    * @param event
    * @since 27.04.2018 10:58:13 <a href="mailto:david@lippert-familie.de">David
@@ -192,7 +158,6 @@ public class MainMenueEventhandler {
   protected void handleBtnStatistikClickedAction(ActionEvent event) {
     new CStatistics(this.getController().getStage());
   }
->>>>>>> refs/heads/pbeisert
 
   /**
    * @param event
@@ -212,17 +177,6 @@ public class MainMenueEventhandler {
   @FXML
   protected void handleBtnEinstellungenClickedAction(ActionEvent event) {
     new CSettings(this.getController().getStage());
-  }
-
-  /**
-   * @param event
-   * @since 27.04.2018 10:59:42 <a href="mailto:david@lippert-familie.de">David
-   *        Lippert</a> | Erstellt
-   */
-  @FXML
-  protected void handleBtnBeendenClickedAction(ActionEvent event) {
-    // JPAConfig.close();
-    this.getController().getStage().close();
   }
 
   /*
@@ -258,8 +212,7 @@ public class MainMenueEventhandler {
 
   /**
    * @param btnStatistik
-   * @since 26.04.2018 13:53:25 <a href="mailto:david@lippert-familie.de">David
-   *        Lippert</a> | Erstellt
+   * @since 16.05.2018 10:14:31 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt
    */
   public void setBtnStatistik(Button btnStatistik) {
     this.btnStatistik = btnStatistik;
