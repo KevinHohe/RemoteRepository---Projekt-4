@@ -28,7 +28,7 @@
       <Button fx:id="btnHinzufuegen" mnemonicParsing="false" onAction="#handleBtnHinzufuegenClickedAction" prefWidth="100.0" text="Hinzufügen" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../Downloads/PluPanda.png" />
+            <Image url="@../../../database/PluPanda.png" />
          </image>
          <GridPane.margin>
             <Insets />
