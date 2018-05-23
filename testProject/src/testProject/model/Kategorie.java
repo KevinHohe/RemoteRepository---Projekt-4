@@ -23,7 +23,7 @@ public class Kategorie {
 
   /** @since 04.05.2018 09:11:49 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
   @Id
-  private int    kategorieID;
+  private Integer    kategorieID;
   /** @since 04.05.2018 09:12:40 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
   private String beschreibung;
 

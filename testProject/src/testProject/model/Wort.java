@@ -28,17 +28,18 @@ public class Wort {
 
   /** @since 27.04.2018 08:59:38 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
   @Id
-  private Integer    wortID;
+  private Integer wortID;
+
   /** @since 27.04.2018 08:59:41 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
-  private String wortSingular;
+  private String  wortSingular;
   /** @since 03.05.2018 13:35:52 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
-  private String wortPlural;
+  private String  wortPlural;
   /** @since 04.05.2018 08:52:07 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
-  private String bild;
+  private String  bild;
   /** @since 04.05.2018 08:53:24 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
-  private String ton;
+  private String  ton;
   /** @since 04.05.2018 08:53:15 <a href="mailto:david@lippert-familie.de">David Lippert</a> | Erstellt */
-  private int    kategorieID;
+  private int     kategorieID;
 
   /**
    * @return wortSingular

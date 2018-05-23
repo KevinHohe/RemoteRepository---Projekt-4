@@ -10,7 +10,7 @@
    <bottom>
       <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <buttons>
-            <Button fx:id="btnExitGame" mnemonicParsing="false" text="Beenden" />
+            <Button fx:id="btnBack" mnemonicParsing="false" onAction="#handleBtnBackClickedAction" text="Zurück" />
         </buttons>
          <BorderPane.margin>
             <Insets right="5.0" />
